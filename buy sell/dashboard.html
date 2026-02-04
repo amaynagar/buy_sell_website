@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dashboard | BuySell</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">BuySell</div>
+
+  <input class="search" placeholder="Search products">
+
+  <div class="nav-right">
+    <span>📍 India</span>
+    <button onclick="logout()">Logout</button>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="category-rail">
+    <div onclick="filterProducts('all')">🔥 All</div>
+    <div onclick="filterProducts('mobile')">📱 Mobiles</div>
+    <div onclick="filterProducts('car')">🚗 Cars</div>
+    <div onclick="filterProducts('electronics')">💻 Electronics</div>
+    <div onclick="filterProducts('furniture')">🪑 Furniture</div>
+  </aside>
+
+  <main>
+    <div class="chips">
+      <span onclick="filterProducts('mobile')">iPhone</span>
+      <span onclick="filterProducts('car')">Honda</span>
+      <span onclick="filterProducts('electronics')">Laptop</span>
+      <span onclick="filterProducts('furniture')">Sofa</span>
+    </div>
+
+    <section class="product-grid" id="products"></section>
+  </main>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
